@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dimensions',
@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
   templateUrl: './dimensions.component.html',
   styleUrl: './dimensions.component.css'
 })
-export class DimensionsComponent {
+export class DimensionsComponent implements OnInit {
+  
+    public title: string;
 
+    constructor(){
+      this.title = 'Dimensions'
+    }
+
+    ngOnInit(): void {
+        console.log('Componente de dimsions')
+    }
 }
